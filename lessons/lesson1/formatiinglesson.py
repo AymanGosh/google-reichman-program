@@ -8,9 +8,10 @@ def f1(s: str) -> int:
 
 # funny_reverse.py
 
+
 def funny(s):
     s = s.split(" ")
-    for w in s :
+    for w in s:
         w = w[::-1]
         print(w)
 
