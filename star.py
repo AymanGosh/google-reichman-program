@@ -1,5 +1,5 @@
 from turtle import *
-
+speed(10)
 
 color("green", "blue")
 
