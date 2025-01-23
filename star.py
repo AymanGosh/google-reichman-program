@@ -1,6 +1,10 @@
 from turtle import *
 
+<<<<<<< HEAD
 color("green", "blue")
+=======
+color("green", "blue")
+>>>>>>> blue_star
 
 begin_fill()
 while True:
