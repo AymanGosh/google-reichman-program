@@ -1,49 +1,18 @@
-# test
-
-# arr = [1]
-# 1
-
-# arr = []
-# 0
-
-#arr = [0,0,0]
-# 0
-
-# arr = [-1,0]
-# 0
-
-# arr = [3,3,-7,2]
-# [3,3] = 6
-
-# arr = [-3,3,-2,2,5]
-# 11
 
 
 def biggest_sub_arr(nums):
-    max_sum = float('-inf')
-
-    sum = 0
-    if ( len ( nums) == 1):
-        return nums[0]
-    elif ( len(nums)==0):
-        return 0
-
-    for i in range(0,len(nums)):
-        sum = sum + nums[i]
-
-        if(sum<0):
+    sum, maxSum = 0, float('-inf')
+    for i in range(len(nums)):
+        sum += nums[i]
+        if sum > maxSum:
+            maxSum = sum
+        if sum < 0:
             sum = 0
-
-        if(sum>max_sum):
-            max_sum = sum
-
-    return max_sum
+    return maxSum
 
 
-assert biggest_sub_arr([]) == 0
-
-print(biggest_sub_arr([1,2,3]))
-assert biggest_sub_arr([1,2,3]) == 6
+print(biggest_sub_arr([5,4,-1,-1,-1,-6,77]))
+assert biggest_sub_arr([5,4,-1,-1,-1]) ==  9
 
 
 assert biggest_sub_arr([1,0,3]) == 4
